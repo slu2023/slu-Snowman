@@ -13,6 +13,8 @@ public class Gamecontroller : MonoBehaviour
     public GameObject PlayScreen;
     private WordGame guessingGame;
 
+    public UnityEngine.UI.InputField PlayerGuess;
+
 
     public void StartGame()
     {
@@ -36,6 +38,14 @@ public class Gamecontroller : MonoBehaviour
         this.Message.text = this.Message.text = "hello!!!!!!";
         this.PlayScreen.SetActive(false);
         this.StartScreen.SetActive(true);
+        this.guessingGame = new WordGame("banana", 5);
+        Debug.Log(this.guessingGame.GetWord());
+        Debug.Log(this.guessingGame.GetFullWord());
+    }
+
+    public void SubmitGuess()
+    {
+        Debug.Log(this.guessingGame.CheckGuess(this.PlayerGuess.text));
     }
 
 
