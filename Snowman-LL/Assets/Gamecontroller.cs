@@ -38,7 +38,7 @@ public class Gamecontroller : MonoBehaviour
     {
         CarnivalMusic.Stop();
         villageMusic.Play();
-        this.guessingGame = new WordGame("banana", 5);
+        this.guessingGame = new WordGame("travel", 6);
         this.HiddenWord.text = this.guessingGame.GetWord();
         this.GuessAletter.text = "Guess a letter.";
 
@@ -81,7 +81,7 @@ public class Gamecontroller : MonoBehaviour
 
 
         this.StartScreen.SetActive(true);
-        this.guessingGame = new WordGame("banana", 5);
+        this.guessingGame = new WordGame("travel", 6);
         this.HiddenWord.text = this.guessingGame.GetWord();
         Debug.Log(this.guessingGame.GetFullWord());
     }
